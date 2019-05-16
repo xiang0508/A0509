@@ -24,8 +24,9 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.button);
         sp_fruit = findViewById(R.id.sp_fruit);
         ed_fruit = (EditText)findViewById(R.id.ed_fruit);
-        ArrayAdapter adapter =new ArrayAdapter(this,android.R.layout.simple_list_item_1,fruit);
-        sp_fruit.setAdapter(adapter);
+       // ArrayAdapter adapter =new ArrayAdapter(this,android.R.layout.simple_list_item_1,fruit);
+        ArrayAdapter adapter1 =ArrayAdapter.createFromResource(this,R.array.fruit_array,android.R.layout.simple_expandable_list_item_1);
+        sp_fruit.setAdapter(adapter1);
 
     sp_fruit.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
         @Override
